@@ -1,3 +1,5 @@
+import os
+
 import h5py
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -5,14 +7,17 @@ from pathlib import Path
 from matplotlib.ticker import PercentFormatter
 from adopt_net0 import extract_datasets_from_h5group
 
+#Define basepath
+basepath = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
 # Define the data path
 run_for = 'minC_high'
 if run_for == 'minC_ref':
-    resultfolder = "Z:/PyHub/PyHub_results/CM/Complexity/Chemelot_refCO2tax"
+    resultfolder = os.path.join(basepath, "Raw_results", "Complexity/Chemelot_refCO2tax")
 elif run_for == 'minC_high':
-    resultfolder = "Z:/PyHub/PyHub_results/CM/Complexity/Chemelot_highCO2tax"
+    resultfolder = os.path.join(basepath, "Raw_results", "Complexity/Chemelot_highCO2tax")
 elif run_for == 'minE':
-    resultfolder = "Z:/PyHub/PyHub_results/CM/Complexity/Chemelot_minE"
+    resultfolder = os.path.join(basepath, "Raw_results", "Complexity/Chemelot_minE")
 
 
 

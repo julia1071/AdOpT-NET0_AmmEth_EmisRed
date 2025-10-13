@@ -1,17 +1,20 @@
+import os
 from pathlib import Path
 import adopt_net0.data_preprocessing as dp
 from adopt_net0.modelhub import ModelHub
 from adopt_net0.result_management.read_results import add_values_to_summary
 import pandas as pd
 
+#Set basepath
+basepath = Path(__file__).resolve().parent
 
 #Create data Chemelot cluster
 execute = 0
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Chemelot_cluster"
-    datapath = "Z:/PyHub/PyHub_data/CM/240624_CM"
+    casepath = os.path.join(basepath, "Case_studies", "Chemelot_cluster")
+    datapath = basepath / "Input_data" / "240624_CM"
 
     firsttime = 0
     if firsttime == 1:
@@ -80,8 +83,8 @@ execute = 0
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Chemelot_ethylene"
-    datapath = "Z:/PyHub/PyHub_data/CM/240624_CM"
+    casepath = os.path.join(basepath, "Case_studies", "Chemelot_ethylene")
+    datapath = basepath / "Input_data" / "240624_CM"
 
     carrier = 'ethylene'
 
@@ -158,8 +161,8 @@ execute = 0
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Zeeland_cluster"
-    datapath = "Z:/PyHub/PyHub_data/CM/240624_CM"
+    casepath = os.path.join(basepath, "Case_studies", "Zeeland_cluster")
+    datapath = basepath / "Input_data" / "240624_CM"
 
     firsttime = 0
     if firsttime == 1:
@@ -227,8 +230,8 @@ execute = 0
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Zeeland_ethylene"
-    datapath = "Z:/PyHub/PyHub_data/CM/240624_CM"
+    casepath = os.path.join(basepath, "Case_studies", "Zeeland_ethylene")
+    datapath = basepath / "Input_data" / "240624_CM"
 
     carrier = 'ethylene'
 
@@ -301,7 +304,7 @@ execute = 0
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Infra_2clusters"
+    casepath = os.path.join(basepath, "Case_studies", "Infra_2clusters")
 
     # Create template files
     dp.create_optimization_templates(casepath)

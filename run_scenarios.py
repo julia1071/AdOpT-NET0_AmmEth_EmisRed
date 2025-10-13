@@ -1,17 +1,20 @@
 import json
+import os
 from pathlib import Path
 import adopt_net0.data_preprocessing as dp
 from adopt_net0.modelhub import ModelHub
 from adopt_net0.result_management.read_results import add_values_to_summary
 
+#Define basepath
+basepath = os.path.dirname(os.path.abspath(__file__))
 
 #Run Chemelot case study min costs
 execute = 1
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Chemelot_cluster"
-    resultpath = "Z:/PyHub/PyHub_results/CM/Complexity/Chemelot"
+    casepath = os.path.join(basepath, "Case_studies", "Chemelot_cluster")
+    resultpath = os.path.join(basepath, "Raw_results", "Complexity/Chemelot")
     json_filepath = Path(casepath) / "ConfigModel.json"
 
     co2tax = ['high']
@@ -61,8 +64,8 @@ execute = 1
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Chemelot_cluster"
-    resultpath = "Z:/PyHub/PyHub_results/CM/Complexity/Chemelot_minE"
+    casepath = os.path.join(basepath, "Case_studies", "Chemelot_cluster")
+    resultpath = os.path.join(basepath, "Raw_results", "Complexity/Chemelot_minE")
     json_filepath = Path(casepath) / "ConfigModel.json"
 
     TD = [10, 20, 40, 60, 100, 200, 0]
@@ -107,8 +110,8 @@ execute = 0
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Chemelot_cluster_relaxed"
-    resultpath = "Z:/PyHub/PyHub_results/CM/RDS3_Chemelot_cluster_relaxed"
+    casepath = os.path.join(basepath, "Case_studies", "Chemelot_cluster_relaxed")
+    resultpath = os.path.join(basepath, "Raw_results", "RDS3_Chemelot_cluster_relaxed")
     json_filepath = Path(casepath) / "ConfigModel.json"
 
     obj = ['costs', 'emissions_minC']
@@ -143,8 +146,8 @@ execute = 0
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Chemelot_cluster"
-    resultpath = "Z:/PyHub/PyHub_results/CM/RDS3_Chemelot_cluster_minE"
+    casepath = os.path.join(basepath, "Case_studies", "Chemelot_cluster")
+    resultpath = os.path.join(basepath, "Raw_results", "RDS3_Chemelot_cluster_minE")
     json_filepath = Path(casepath) / "ConfigModel.json"
 
 
@@ -204,8 +207,8 @@ execute = 0
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Chemelot_cluster"
-    resultpath = "Z:/PyHub/PyHub_results/CM/test"
+    casepath = os.path.join(basepath, "Case_studies", "Chemelot_cluster")
+    resultpath = os.path.join(basepath, "Raw_results", "test")
     json_filepath = Path(casepath) / "ConfigModel.json"
 
     # objectives = ['costs', 'emissions_minC']

@@ -13,8 +13,8 @@ execute = 0
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Infra_2clusters"
-    resultpath = "Z:/PyHub/PyHub_results/CM/Infrastructure/2clusters"
+    casepath = os.path.join(basepath, "Case_studies", "Infra_2clusters")
+    resultpath = os.path.join(basepath, "Raw_results", "Infrastructure/2clusters")
     json_filepath = Path(casepath) / "ConfigModel.json"
 
     objectives = ['costs', 'emissions_minC']
@@ -72,13 +72,14 @@ execute = 1
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Chemelot_cluster"
+    casepath = os.path.join(basepath, "Case_studies", "Chemelot_cluster")
     json_filepath = Path(casepath) / "ConfigModel.json"
 
     scenarios = ['CO2limHigh', 'CO2lim0', 'eleclim']
 
     for scen in scenarios:
-        resultpath = "Z:/PyHub/PyHub_results/CM/Infrastructure/Chemelot_" + str(scen)
+        scen_name = "Chemelot_" + str(scen)
+        resultpath = os.path.join(basepath, "Raw_results", "Infrastructure", scen_name)
 
         # objectives = ['costs', 'emissions_minC']
         objectives = ['costs']
@@ -140,13 +141,14 @@ execute = 0
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Zeeland_cluster"
+    casepath = os.path.join(basepath, "Case_studies", "Zeeland_cluster")
     json_filepath = Path(casepath) / "ConfigModel.json"
 
     scenarios = ['CO2limHigh', 'CO2lim0', 'eleclim']
 
     for scen in scenarios:
-        resultpath = "Z:/PyHub/PyHub_results/CM/Infrastructure/Zeeland_" + str(scen)
+        scen_name = "Zeeland_" + str(scen)
+        resultpath = os.path.join(basepath, "Raw_results", "Infrastructure", scen_name)
 
         # objectives = ['costs', 'emissions_minC']
         objectives = ['costs']

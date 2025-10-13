@@ -9,9 +9,12 @@ from matplotlib.colors import to_rgba
 from matplotlib.ticker import PercentFormatter
 from adopt_net0 import extract_datasets_from_h5group
 
+#Define basepath
+basepath = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
 # Define the data path
-resultfolder = "Z:/PyHub/PyHub_results/CM/Infrastructure"
-data_to_excel_path = 'C:/EHubversions/AdOpT-NET0_Julia/Plotting/result_data_infra.xlsx'
+resultfolder = os.path.join(basepath, "Raw_results", "Infrastructure")
+data_to_excel_path = os.path.join(basepath, "Plotting", "result_data_infra.xlsx")
 
 # select the type of plot from ['costs_spec', 'costs_spec_cor', 'emissions_spec', 'emissions_spec_cor', 'size']
 plot_type = 'costs_spec_cor'
@@ -197,15 +200,15 @@ if plot_type in ['costs_spec', 'costs_spec_cor', 'emissions_spec', 'emissions_sp
     saveas = 'both'
 
     if saveas == 'svg':
-        savepath = f'C:/Users/5637635/Documents/OneDrive - Universiteit Utrecht/Images and graphs/Collection CM/PaperFinal/{filename}.svg'
+        savepath = os.path.join(DATAPATH, "Plotting", "CM_Plots", f'{filename}.svg')
         plt.savefig(savepath, format='svg')
     elif saveas == 'pdf':
-        savepath = f'C:/Users/5637635/Documents/OneDrive - Universiteit Utrecht/Images and graphs/Collection CM/PaperFinal/{filename}.pdf'
+        savepath = os.path.join(DATAPATH, "Plotting", "CM_Plots", f'{filename}.pdf')
         plt.savefig(savepath, format='pdf')
     elif saveas == 'both':
-        savepath = f'C:/Users/5637635/Documents/OneDrive - Universiteit Utrecht/Images and graphs/Collection CM/PaperFinal/{filename}.pdf'
+        savepath = os.path.join(DATAPATH, "Plotting", "CM_Plots", f'{filename}.pdf')
         plt.savefig(savepath, format='pdf')
-        savepath = f'C:/Users/5637635/Documents/OneDrive - Universiteit Utrecht/Images and graphs/Collection CM/PaperFinal/{filename}.svg'
+        savepath = os.path.join(DATAPATH, "Plotting", "CM_Plots", f'{filename}.svg')
         plt.savefig(savepath, format='svg')
 
 
@@ -285,10 +288,10 @@ elif plot_type == 'size':
     saveas = '0'
 
     if saveas == 'svg':
-        savepath = f'C:/Users/5637635/Documents/OneDrive - Universiteit Utrecht/Images and graphs/Collection CM/Paper/installed_capacities.svg'
+        savepath = os.path.join(basepath, "Plotting", "CM_Plots", 'installed_capacities.svg')
         plt.savefig(savepath, format='svg')
     elif saveas == 'pdf':
-        savepath = f'C:/Users/5637635/Documents/OneDrive - Universiteit Utrecht/Images and graphs/Collection CM/Paper/installed_capacities.pdf'
+        savepath = os.path.join(basepath, "Plotting", "CM_Plots", 'installed_capacities.pdf')
         plt.savefig(savepath, format='pdf')
 
 #show plot

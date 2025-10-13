@@ -13,13 +13,14 @@ execute = 1
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Chemelot_cluster_CGtank"
+    casepath = os.path.join(basepath, "Case_studies", "Chemelot_cluster_CGtank")
     json_filepath = Path(casepath) / "ConfigModel.json"
 
     scenarios = ['slow', 'slowSMR', 'slowCracker']
 
     for scen in scenarios:
-        resultpath = "Z:/PyHub/PyHub_results/CM/Flexibility/Chemelot_" + str(scen)
+        scen_name = "Chemelot_" + str(scen)
+        resultpath = os.path.join(basepath, "Raw_results", "Flexibility", scen_name)
 
         # objectives = ['costs', 'emissions_minC']
         objectives = ['costs']
@@ -91,13 +92,14 @@ execute = 1
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Zeeland_cluster_CGtank"
+    casepath = os.path.join(basepath, "Case_studies", "Zeeland_cluster_CGtank")
     json_filepath = Path(casepath) / "ConfigModel.json"
 
     scenarios = ['Reference_tank', 'slow', 'slowSMR', 'slowCracker']
 
     for scen in scenarios:
-        resultpath = "Z:/PyHub/PyHub_results/CM/Flexibility/Zeeland_" + str(scen)
+        scen_name = "Zeeland_" + str(scen)
+        resultpath = os.path.join(basepath, "Raw_results", "Flexibility", scen_name)
 
         # objectives = ['costs', 'emissions_minC']
         objectives = ['costs']

@@ -13,8 +13,8 @@ execute = 1
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Chemelot_cluster"
-    resultpath = "Z:/PyHub/PyHub_results/CM/Cluster_integration/Chemelot_cluster"
+    casepath = os.path.join(basepath, "Case_studies", "Chemelot_cluster")
+    resultpath = os.path.join(basepath, "Raw_results", "Cluster_integration/Chemelot_cluster")
     json_filepath = Path(casepath) / "ConfigModel.json"
 
     # objectives = ['costs', 'emissions_minC']
@@ -68,8 +68,8 @@ execute = 0
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Chemelot_ammonia"
-    resultpath = "Z:/PyHub/PyHub_results/CM/Cluster_integration/Chemelot_ammonia"
+    casepath = os.path.join(basepath, "Case_studies", "Chemelot_ammonia")
+    resultpath = os.path.join(basepath, "Raw_results", "Cluster_integration/Chemelot_ammonia")
     json_filepath = Path(casepath) / "ConfigModel.json"
 
     # objectives = ['costs', 'emissions_minC']
@@ -124,8 +124,8 @@ execute = 0
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Chemelot_ethylene"
-    resultpath = "Z:/PyHub/PyHub_results/CM/Cluster_integration/Chemelot_ethylene"
+    casepath = os.path.join(basepath, "Case_studies", "Chemelot_ethylene")
+    resultpath = os.path.join(basepath, "Raw_results", "Cluster_integration/Chemelot_ethylene")
     json_filepath = Path(casepath) / "ConfigModel.json"
 
     objectives = ['costs', 'emissions_minC']
@@ -181,8 +181,8 @@ execute = 0
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Zeeland_cluster"
-    resultpath = "Z:/PyHub/PyHub_results/CM/Cluster_integration/Zeeland_cluster"
+    casepath = os.path.join(basepath, "Case_studies", "Zeeland_cluster")
+    resultpath = os.path.join(basepath, "Raw_results", "Cluster_integration/Zeeland_cluster")
     json_filepath = Path(casepath) / "ConfigModel.json"
 
     objectives = ['costs']
@@ -238,8 +238,8 @@ execute = 0
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Zeeland_ammonia"
-    resultpath = "Z:/PyHub/PyHub_results/CM/Cluster_integration/Zeeland_ammonia"
+    casepath = os.path.join(basepath, "Case_studies", "Zeeland_ammonia")
+    resultpath = os.path.join(basepath, "Raw_results", "Cluster_integration/Zeeland_ammonia")
     json_filepath = Path(casepath) / "ConfigModel.json"
 
     # objectives = ['costs', 'emissions_minC']
@@ -294,8 +294,8 @@ execute = 0
 
 if execute == 1:
     # Specify the path to your input data
-    casepath = "Z:/PyHub/PyHub_casestudies/CM/Zeeland_ethylene"
-    resultpath = "Z:/PyHub/PyHub_results/CM/Cluster_integration/Zeeland_ethylene"
+    casepath = os.path.join(basepath, "Case_studies", "Zeeland_ethylene")
+    resultpath = os.path.join(basepath, "Raw_results", "Cluster_integration/Zeeland_ethylene")
     json_filepath = Path(casepath) / "ConfigModel.json"
 
     objectives = ['costs', 'emissions_minC']

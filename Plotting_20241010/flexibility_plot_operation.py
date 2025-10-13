@@ -7,11 +7,14 @@ from pathlib import Path
 from matplotlib.colors import to_rgba
 from adopt_net0 import extract_datasets_from_h5group, extract_dataset_from_h5
 
+#Define basepath
+basepath = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
 # Define the data paths
-RESULT_FOLDER = "Z:/PyHub/PyHub_results/CM/Cluster_integration"
-DATA_TO_EXCEL_PATH = 'C:/EHubversions/AdOpT-NET0_Julia/Plotting/operation_flex_import.xlsx'
-DATA_TO_EXCEL_PATH1 = 'C:/EHubversions/AdOpT-NET0_Julia/Plotting/operation_flex.xlsx'
-DATAPATH = "C:/EHubversions/AdOpT-NET0_Julia/Plotting"
+RESULT_FOLDER = os.path.join(basepath, "Raw_results", "Cluster_integration")
+DATA_TO_EXCEL_PATH = os.path.join(basepath, "Plotting", "operation_flex_import.xlsx")
+DATA_TO_EXCEL_PATH1 = os.path.join(basepath, "Plotting", "operation_flex.xlsx")
+DATAPATH = os.path.join(basepath, "Plotting")
 EL_LOAD_PATH = Path(DATAPATH) / 'Electricity_data_CM.csv'
 
 def fetch_and_process_data_import(resultfolder, data_to_excel_path):
@@ -325,15 +328,15 @@ def main():
 
     saveas = 'both'
     if saveas == 'svg':
-        savepath = f'C:/Users/5637635/Documents/OneDrive - Universiteit Utrecht/Images and graphs/Collection CM/PaperFinal/{filename}.svg'
+        savepath = os.path.join(DATAPATH, "Plotting", "CM_Plots", f'{filename}.svg')
         plt.savefig(savepath, format='svg')
     elif saveas == 'pdf':
-        savepath = f'C:/Users/5637635/Documents/OneDrive - Universiteit Utrecht/Images and graphs/Collection CM/PaperFinal/{filename}.pdf'
+        savepath = os.path.join(DATAPATH, "Plotting", "CM_Plots", f'{filename}.pdf')
         plt.savefig(savepath, format='pdf')
     elif saveas == 'both':
-        savepath = f'C:/Users/5637635/Documents/OneDrive - Universiteit Utrecht/Images and graphs/Collection CM/PaperFinal/{filename}.pdf'
+        savepath = os.path.join(DATAPATH, "Plotting", "CM_Plots", f'{filename}.pdf')
         plt.savefig(savepath, format='pdf')
-        savepath = f'C:/Users/5637635/Documents/OneDrive - Universiteit Utrecht/Images and graphs/Collection CM/PaperFinal/{filename}.svg'
+        savepath = os.path.join(DATAPATH, "Plotting", "CM_Plots", f'{filename}.svg')
         plt.savefig(savepath, format='svg')
 
     plt.show()

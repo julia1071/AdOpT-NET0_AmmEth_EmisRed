@@ -9,9 +9,12 @@ from matplotlib.colors import to_rgba
 from matplotlib.ticker import PercentFormatter
 from adopt_net0 import extract_datasets_from_h5group
 
+#Define basepath
+basepath = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
 # Define the data path
-resultfolder = "Z:/PyHub/PyHub_results/CM/Flexibility"
-data_to_excel_path = 'C:/EHubversions/AdOpT-NET0_Julia/Plotting/result_data_flex.xlsx'
+resultfolder = os.path.join(basepath, "Raw_results", "Flexibility")
+data_to_excel_path = os.path.join(basepath, "Plotting", "result_data_flex.xlsx")
 
 # select the type of plot from ['costs_spec', 'costs_spec_cor', 'emissions_spec', 'emissions_spec_cor', 'size']
 plot_type = 'costs_spec_cor'
@@ -196,10 +199,10 @@ if plot_type in ['costs_spec', 'costs_spec_cor', 'emissions_spec', 'emissions_sp
     saveas = '0'
 
     if saveas == 'svg':
-        savepath = f'C:/Users/5637635/Documents/OneDrive - Universiteit Utrecht/Images and graphs/Collection CM/Paper/{filename}.svg'
+        savepath = os.path.join(DATAPATH, "Plotting", "CM_Plots", '{filename}.svg')
         plt.savefig(savepath, format='svg')
     elif saveas == 'pdf':
-        savepath = f'C:/Users/5637635/Documents/OneDrive - Universiteit Utrecht/Images and graphs/Collection CM/Paper/{filename}.pdf'
+        savepath = os.path.join(DATAPATH, "Plotting", "CM_Plots", '{filename}.pdf')
         plt.savefig(savepath, format='pdf')
 
 
@@ -279,10 +282,10 @@ elif plot_type == 'size':
     saveas = '0'
 
     if saveas == 'svg':
-        savepath = f'C:/Users/5637635/Documents/OneDrive - Universiteit Utrecht/Images and graphs/Collection CM/Paper/installed_capacities.svg'
+        savepath = os.path.join(basepath, "Plotting", "CM_Plots", 'installed_capacities.svg')
         plt.savefig(savepath, format='svg')
     elif saveas == 'pdf':
-        savepath = f'C:/Users/5637635/Documents/OneDrive - Universiteit Utrecht/Images and graphs/Collection CM/Paper/installed_capacities.pdf'
+        savepath = os.path.join(basepath, "Plotting", "CM_Plots", 'installed_capacities.pdf')
         plt.savefig(savepath, format='pdf')
 
 #show plot

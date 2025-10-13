@@ -9,11 +9,14 @@ from matplotlib.colors import to_rgba
 from matplotlib.ticker import PercentFormatter
 from adopt_net0 import extract_datasets_from_h5group
 
+#Define basepath
+basepath = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
 result_type = 'Infrastructure'
 
 # Define the data path
-resultfolder = "Z:/PyHub/PyHub_results/CM/" + result_type
-data_to_excel_path = 'C:/EHubversions/AdOpT-NET0_Julia/Plotting/result_data_long3.xlsx'
+resultfolder = os.path.join(basepath, "Raw_results", result_type)
+data_to_excel_path = os.path.join(basepath, "Plotting", "result_data_long3.xlsx")
 
 get_data = 1
 
