@@ -1,0 +1,92 @@
+
+Gurobi 11.0.2 (win64) logging started Fri Oct 18 12:43:42 2024
+
+Set parameter LogFile to value "Z:\PyHub\PyHub_results\CM\Cluster_integration\Chemelot_ethylene\20241018124340_minE_refCO2tax-1\solver_log.txt"
+Set parameter TimeLimit to value 172800
+Set parameter MIPGap to value 0.01
+Set parameter NodefileStart to value 60
+Set parameter LPWarmStart to value 0
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows Server 2019.0 (17763.2))
+
+CPU model: QEMU Virtual CPU version 2.5+, instruction set [SSE2]
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 1785799 rows, 1748963 columns and 4124878 nonzeros
+Model fingerprint: 0x1f468672
+Variable types: 1747037 continuous, 1926 integer (1926 binary)
+Coefficient statistics:
+  Matrix range     [2e-05, 3e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 4e+08]
+  RHS range        [1e+00, 3e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 1641430 rows and 1627871 columns
+Presolve time: 2.97s
+Presolved: 144369 rows, 121092 columns, 574818 nonzeros
+Variable types: 119646 continuous, 1446 integer (1446 binary)
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing primal log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    4.5355840e+04   7.156163e+08   3.817583e+13      9s
+    4346    4.5179052e+04   7.780822e+03   4.859876e+08     10s
+   13426    6.9459880e+04   5.085506e+03   5.797319e+09     15s
+   18519    7.4025742e+05   1.686855e+03   1.517576e+09     20s
+   22787    1.0584664e+06   1.203858e+02   2.126810e+08     25s
+   23724    2.8164086e+06   0.000000e+00   5.110038e+04     26s
+   29728    2.1889966e+06   0.000000e+00   3.139771e+05     30s
+   36521    1.6710563e+06   0.000000e+00   4.806713e+05     35s
+   40510    1.6598763e+06   0.000000e+00   1.187405e+05     40s
+   44774    1.6489897e+06   0.000000e+00   1.218220e+05     45s
+   49301    1.6392081e+06   0.000000e+00   9.337184e+04     50s
+   53697    1.6306721e+06   0.000000e+00   9.021771e+04     55s
+   57692    1.6214147e+06   0.000000e+00   1.069072e+05     60s
+   61953    1.6124612e+06   0.000000e+00   5.480866e+04     65s
+   66743    1.6061482e+06   0.000000e+00   1.613534e+05     70s
+   71930    1.6031751e+06   0.000000e+00   2.039076e+05     75s
+   77383    1.6006180e+06   0.000000e+00   4.525852e+04     80s
+   81150    1.6004126e+06   0.000000e+00   6.568323e+04     85s
+   83530    1.6004112e+06   0.000000e+00   1.691561e+05     90s
+   85733    1.6004097e+06   0.000000e+00   1.533527e+05     95s
+   87613    1.6004082e+06   0.000000e+00   1.053974e+05    100s
+   89063    1.6004072e+06   0.000000e+00   2.434310e+05    105s
+   90643    1.6004063e+06   0.000000e+00   7.403430e+04    110s
+   92503    1.6004045e+06   0.000000e+00   1.380962e+05    115s
+   94273    1.6004031e+06   0.000000e+00   6.564774e+04    120s
+   95928    1.6004027e+06   0.000000e+00   1.026520e+04    125s
+   97308    1.6004021e+06   0.000000e+00   4.031554e+03    130s
+   99108    1.6003808e+06   0.000000e+00   1.206192e+04    135s
+  100618    1.6003713e+06   0.000000e+00   4.516500e+01    140s
+  102428    1.6003638e+06   0.000000e+00   7.837797e+01    145s
+  104561    1.6003578e+06   0.000000e+00   2.895576e+02    150s
+  106191    1.6003540e+06   0.000000e+00   6.034709e+01    155s
+  107879    1.6003575e+06   0.000000e+00   0.000000e+00    160s
+Concurrent spin time: 25.54s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+  102021    1.6003575e+06   0.000000e+00   0.000000e+00    185s
+
+Root relaxation: objective 1.600357e+06, 102021 iterations, 176.46 seconds (112.04 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    1600357.4563 1600357.46  0.00%     -  185s
+
+Explored 1 nodes (102021 simplex iterations) in 195.68 seconds (115.37 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: 1.60036e+06 
+
+Optimal solution found (tolerance 1.00e-02)
+Warning: max constraint violation (1.4272e-05) exceeds tolerance
+Best objective 1.600357456301e+06, best bound 1.600357456301e+06, gap 0.0000%

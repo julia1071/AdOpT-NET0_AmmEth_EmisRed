@@ -1,0 +1,80 @@
+
+Gurobi 11.0.2 (win64) logging started Fri Oct 18 12:40:15 2024
+
+Set parameter LogFile to value "Z:\PyHub\PyHub_results\CM\Cluster_integration\Zeeland_ethylene\20241018124013_minE_refCO2tax-1\solver_log.txt"
+Set parameter TimeLimit to value 172800
+Set parameter MIPGap to value 0.01
+Set parameter NodefileStart to value 60
+Set parameter LPWarmStart to value 0
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows Server 2019.0 (17763.2))
+
+CPU model: QEMU Virtual CPU version 2.5+, instruction set [SSE2]
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 1785799 rows, 1748963 columns and 4123499 nonzeros
+Model fingerprint: 0x4181ddb4
+Variable types: 1747037 continuous, 1926 integer (1926 binary)
+Coefficient statistics:
+  Matrix range     [2e-05, 4e+08]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 4e+08]
+  RHS range        [1e+00, 4e+08]
+Warning: Model contains large matrix coefficient range
+         Consider reformulating model or setting NumericFocus parameter
+         to avoid numerical issues.
+Presolve removed 1641430 rows and 1636631 columns
+Presolve time: 2.68s
+Presolved: 144369 rows, 112332 columns, 566058 nonzeros
+Variable types: 110886 continuous, 1446 integer (1446 binary)
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing primal log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    4.5077242e+04   9.974749e+08   3.806500e+13      8s
+    6916    1.0509406e+05   1.200107e+04   6.588706e+08     10s
+   14311    1.3857310e+06   3.575470e+03   6.264658e+08     15s
+   21141    1.7854927e+06   9.684451e+02   1.582441e+08     20s
+   25221    4.8033877e+06   0.000000e+00   4.605720e+04     23s
+   28398    3.0236028e+06   0.000000e+00   2.980857e+05     25s
+   39707    2.5428435e+06   0.000000e+00   3.560620e+05     30s
+   45001    2.2487149e+06   0.000000e+00   7.708041e+04     35s
+   48441    2.2487015e+06   0.000000e+00   7.739218e+04     40s
+   52214    2.2486992e+06   0.000000e+00   8.484248e+04     45s
+   55007    2.2486967e+06   0.000000e+00   6.535408e+04     50s
+   57617    2.2486907e+06   0.000000e+00   9.344642e+05     55s
+   60257    2.2485868e+06   0.000000e+00   8.310411e+05     60s
+   62527    2.2477956e+06   0.000000e+00   1.433816e+05     65s
+   64947    2.2463037e+06   0.000000e+00   9.361978e+04     70s
+   67407    2.2458288e+06   0.000000e+00   4.778789e+04     75s
+   69187    2.2455949e+06   0.000000e+00   2.911767e+04     80s
+   71210    2.2454815e+06   0.000000e+00   3.186799e+04     85s
+   73060    2.2453360e+06   0.000000e+00   2.924175e+03     90s
+   75060    2.2451644e+06   0.000000e+00   4.751646e+01     95s
+   75772    2.2480456e+06   0.000000e+00   0.000000e+00     97s
+Concurrent spin time: 16.18s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   71715    2.2480456e+06   0.000000e+00   0.000000e+00    113s
+
+Root relaxation: objective 2.248046e+06, 71715 iterations, 105.35 seconds (85.74 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    2248045.6268 2248045.63  0.00%     -  113s
+
+Explored 1 nodes (71715 simplex iterations) in 123.61 seconds (89.03 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: 2.24805e+06 
+
+Optimal solution found (tolerance 1.00e-02)
+Warning: max constraint violation (1.5167e-04) exceeds tolerance
+Best objective 2.248045626837e+06, best bound 2.248045626837e+06, gap 0.0000%

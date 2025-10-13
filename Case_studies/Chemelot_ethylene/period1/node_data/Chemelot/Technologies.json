@@ -1,0 +1,7 @@
+{
+    "existing": {},
+    "new": ["NaphthaCracker", "NaphthaCracker_Electric",
+    "NaphthaCracker_CC", "Boiler_Industrial_NG", "Boiler_El", 
+    "Storage_CO2", "Storage_Ethylene", "Storage_Battery",
+    "CO2toEmission", "gasmixer"]
+}

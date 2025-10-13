@@ -1,0 +1,8 @@
+{
+    "existing": {},
+    "new": ["KBRreformer", "KBRreformer_CC", "eSMR", "HaberBosch",
+    "AEC", "ASU", "NaphthaCracker", "NaphthaCracker_Electric",
+    "NaphthaCracker_CC", "Boiler_Industrial_NG", "Boiler_El", "Storage_Ammonia",
+    "Storage_CO2", "Storage_Ethylene", "Storage_H2", "Storage_Battery", "Storage_CG",
+    "CO2toEmission", "gasmixer"]
+}

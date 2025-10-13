@@ -1,0 +1,41 @@
+{
+    "electricity": {
+        "curtailment_possible": 0
+    },
+    "methane": {
+        "curtailment_possible": 0
+    },
+    "hydrogen": {
+        "curtailment_possible": 0
+    },
+    "CO2": {
+        "curtailment_possible": 0
+    },
+    "nitrogen": {
+        "curtailment_possible": 0
+    },
+    "ammonia": {
+        "curtailment_possible": 0
+    },
+    "naphtha": {
+        "curtailment_possible": 0
+    },
+    "steam": {
+        "curtailment_possible": 0
+    },
+    "ethylene": {
+        "curtailment_possible": 0
+    },
+    "crackergas": {
+        "curtailment_possible": 0
+    },
+    "gas": {
+        "curtailment_possible": 0
+    },
+    "heatlowT": {
+        "curtailment_possible": 0
+    },
+    "oxygen": {
+        "curtailment_possible": 0
+    }
+}
