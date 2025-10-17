@@ -11,7 +11,9 @@ This repository contains the code, data, and results used in the paper:
 *Optimizing Emissions Reduction in Ammonia–Ethylene Chemical Clusters: Synergistic Integration of Electrification, Carbon Capture, and Hydrogen.*  
 Industrial & Engineering Chemistry Research, 64, 4479–4497. DOI:[10.1021/ACS.IECR.4C03817](https://doi.org/10.1021/ACS.IECR.4C03817)
 
-This repository is **based on the original AdOpT-NET0 tool**, but includes adaptations specific to this work. It contains all input datasets, case studies, and raw results required to reproduce the analyses in the paper. Users can regenerate the results by running the corresponding scripts, e.g., `run_{case_study}.py`.
+This repository is **based on the original AdOpT-NET0 tool**, but includes adaptations specific to this work. It 
+contains all input datasets, case studies, and raw results required to reproduce the analyses in the paper. Users can 
+regenerate the results by running the corresponding scripts, e.g., `run_scenarios_{scenario}.py`.
 
 ## Installation
 
